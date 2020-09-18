@@ -29,6 +29,7 @@ def get_events():
 		exit()
 
 def get_controls():
+	start = time.time()
 	global outputs
 	try:
 		i = 0
@@ -39,8 +40,8 @@ def get_controls():
 
 			np.savez(location+"frame-{}.npz".format(i), a = frame, b = controllerOutput)
 
-			print (i, controllerOutput)	
 			i+=1
+			
 	except KeyboardInterrupt:
 		exit()
 
