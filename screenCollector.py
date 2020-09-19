@@ -5,7 +5,7 @@ import d3dshot
 from numba import jit
 import os
 
-TARGET_INPUT_WIDTH = 224    # pixels
+TARGET_INPUT_WIDTH = 512    # pixels
 
 
 class FrameGrabber:

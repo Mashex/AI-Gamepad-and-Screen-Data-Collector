@@ -34,9 +34,12 @@ def get_controls(delay, run_event):
 	global outputs, cap
 
 	list_of_files = glob.glob('images/*.npz')
-	latest_file = max(list_of_files, key=os.path.getctime)
-	last_number = latest_file.split('.npz')[0].split('frame-')[1]
-	i = int(last_number)
+	if len(list_of_files)>0:
+		latest_file = max(list_of_files, key=os.path.getctime)
+		last_number = latest_file.split('.npz')[0].split('frame-')[1]
+		i = int(last_number)
+	else:
+		i = 0
 	print ("Process Start from frame: ", i)
 	while run_event.is_set():
 		time.sleep(delay)
