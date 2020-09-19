@@ -2,7 +2,6 @@ from getControllerData import *
 from screenCollector import FrameGrabber
 import os, glob
 import numpy as np
-import cv2
 import time 
 import keyboard
 
